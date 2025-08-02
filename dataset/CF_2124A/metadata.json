@@ -1,0 +1,11 @@
+{
+  "problem_id": "CF_2124A",
+  "problem_title": "Deranged Deletions",
+  "problem_url": "https://codeforces.com/contest/2124/problem/A",
+  "rating": 800,
+  "bug_category": null,
+  "bug_description_natural_language": null,
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

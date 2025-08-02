@@ -1,0 +1,11 @@
+{
+  "problem_id": "CF_2121G",
+  "problem_title": "Gangsta",
+  "problem_url": "https://codeforces.com/contest/2121/problem/G",
+  "rating": 1900,
+  "bug_category": null,
+  "bug_description_natural_language": null,
+  "correct_solution_file": "solution_correct.txt",
+  "buggy_solution_file": "solution_buggy.txt",
+  "problem_statement_file": "problem_statement.md"
+}

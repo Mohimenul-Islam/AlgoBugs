@@ -1,0 +1,11 @@
+{
+  "problem_id": "CF_2120D",
+  "problem_title": "Matrix game",
+  "problem_url": "https://codeforces.com/contest/2120/problem/D",
+  "rating": 1800,
+  "bug_category": null,
+  "bug_description_natural_language": null,
+  "correct_solution_file": "solution_correct.txt",
+  "buggy_solution_file": "solution_buggy.txt",
+  "problem_statement_file": "problem_statement.md"
+}

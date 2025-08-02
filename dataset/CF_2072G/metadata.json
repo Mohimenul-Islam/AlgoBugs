@@ -1,0 +1,11 @@
+{
+  "problem_id": "CF_2072G",
+  "problem_title": "I've Been Flipping Numbers for 300 Years and Calculated the Sum",
+  "problem_url": "https://codeforces.com/contest/2072/problem/G",
+  "rating": 2200,
+  "bug_category": null,
+  "bug_description_natural_language": null,
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

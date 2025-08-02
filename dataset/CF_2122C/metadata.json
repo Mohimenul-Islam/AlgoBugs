@@ -1,0 +1,11 @@
+{
+  "problem_id": "CF_2122C",
+  "problem_title": "Manhattan Pairs",
+  "problem_url": "https://codeforces.com/contest/2122/problem/C",
+  "rating": 1700,
+  "bug_category": null,
+  "bug_description_natural_language": null,
+  "correct_solution_file": "solution_correct.txt",
+  "buggy_solution_file": "solution_buggy.txt",
+  "problem_statement_file": "problem_statement.md"
+}

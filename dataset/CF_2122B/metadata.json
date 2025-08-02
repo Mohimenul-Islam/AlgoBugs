@@ -1,0 +1,11 @@
+{
+  "problem_id": "CF_2122B",
+  "problem_title": "Pile Shuffling",
+  "problem_url": "https://codeforces.com/contest/2122/problem/B",
+  "rating": 1100,
+  "bug_category": null,
+  "bug_description_natural_language": null,
+  "correct_solution_file": "solution_correct.txt",
+  "buggy_solution_file": "solution_buggy.txt",
+  "problem_statement_file": "problem_statement.md"
+}

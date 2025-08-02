@@ -1,0 +1,11 @@
+{
+  "problem_id": "CF_2062D",
+  "problem_title": "Balanced Tree",
+  "problem_url": "https://codeforces.com/contest/2062/problem/D",
+  "rating": 2200,
+  "bug_category": null,
+  "bug_description_natural_language": null,
+  "correct_solution_file": "solution_correct.txt",
+  "buggy_solution_file": "solution_buggy.txt",
+  "problem_statement_file": "problem_statement.md"
+}

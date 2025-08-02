@@ -1,0 +1,11 @@
+{
+  "problem_id": "CF_2126D",
+  "problem_title": "This Is the Last Time",
+  "problem_url": "https://codeforces.com/contest/2126/problem/D",
+  "rating": 1200,
+  "bug_category": null,
+  "bug_description_natural_language": null,
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}
