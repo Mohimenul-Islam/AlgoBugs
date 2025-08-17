@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 13,
+  "correct_solution_submission_id": 333579219,
+  "buggy_solution_submission_id": 333578942,
+  "bug_category": "Performance,High Constant Factor TLE,Inefficient Data Structure Usage",
+  "bug_description_natural_language": "The buggy solution creates a copy of the vector of indices from the map in each iteration with the line `vi v = mapi[cur_sum - sum];`. When the vector associated with a prefix sum becomes large, this copying operation is very slow and leads to a Time Limit Exceeded error. The correct solution avoids this inefficiency by directly accessing the vector in the map (`mapi[cur_sum - sum]`) without creating a copy, which significantly improves performance.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

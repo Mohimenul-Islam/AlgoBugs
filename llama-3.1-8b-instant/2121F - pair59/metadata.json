@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 13,
+  "correct_solution_submission_id": 332945314,
+  "buggy_solution_submission_id": 332944031,
+  "bug_category": "Performance,High Constant Factor TLE,Inefficient Data Structure",
+  "bug_description_natural_language": "The buggy solution has a subtle but critical performance issue in how it interacts with the `std::map`. When accessing `mp[p[i]]`, if the key `p[i]` does not exist, the buggy code creates a new empty vector for that key. This repeated creation of empty vectors adds significant overhead, especially when many unique prefix sums are encountered, leading to a Time Limit Exceeded verdict. The correct solution avoids this by first checking if the key exists with `mp.find(p[i]) == mp.end()` before creating a new vector. This prevents unnecessary allocations. Additionally, the correct solution uses a reference `auto& vec = mp[des]` to avoid making a copy of the vector, which further improves performance.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

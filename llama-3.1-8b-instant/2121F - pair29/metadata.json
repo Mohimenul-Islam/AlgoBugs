@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "WRONG_ANSWER",
+  "buggy_solution_passed_tests": 1,
+  "correct_solution_submission_id": 333540104,
+  "buggy_solution_submission_id": 333539094,
+  "bug_category": "Algorithmic,Flawed Logic,Incorrect boundary or edge case handling",
+  "bug_description_natural_language": "The buggy solution incorrectly handles the logic for finding valid subarrays. The main issue is in the `calc` function. The variable `p` is calculated as the index of the last occurrence of `x` in the entire array up to the current position `i`. However, when `calc` is called on a subsegment `[l, r)`, `p` can point to an index outside this segment. The buggy code checks `if (p != -1 ...)` which is not a sufficient condition. The correct solution adds the check `if (p >= l ...)` to ensure that the found position `p` is within the current subsegment `[l, r)`, thus correctly constraining the search for valid subarrays.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

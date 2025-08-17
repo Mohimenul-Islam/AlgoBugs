@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 46,
+  "correct_solution_submission_id": 333735330,
+  "buggy_solution_submission_id": 333735239,
+  "bug_category": "Performance,Time Limit Exceeded,Inefficient Algorithm/Logic",
+  "bug_description_natural_language": "The buggy solution's approach is inefficient, leading to a Time Limit Exceeded error. It iterates through the array to find an element equal to `x`, then expands outwards to identify a contiguous block of elements less than or equal to `x`. It then calls a separate function to process this block. This multi-step process of finding and then processing segments is much slower than the correct solution's approach. The correct solution uses a single-pass sliding window (two-pointer) technique. It maintains a `left` pointer and iterates with a `right` pointer, efficiently updating a map of prefix sums and calculating the answer in one go, which has a better time complexity.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

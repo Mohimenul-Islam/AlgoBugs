@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "WRONG_ANSWER",
+  "buggy_solution_passed_tests": 13,
+  "correct_solution_submission_id": 333592752,
+  "buggy_solution_submission_id": 333586027,
+  "bug_category": "Implementation,Data Type,Integer Overflow",
+  "bug_description_natural_language": "The buggy solution declares the result variable `res` and the return type of the `calc` function as `int`. The total number of valid subarrays can exceed the maximum value of a 32-bit integer, leading to an integer overflow and a wrong final count. The correct solution resolves this by changing the type of `res` and the return type of `calc` to `long long`, ensuring it can store the potentially large result without overflowing.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

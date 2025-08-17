@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 13,
+  "correct_solution_submission_id": 333075227,
+  "buggy_solution_submission_id": 333074059,
+  "bug_category": "Performance,Time Limit Exceeded,Inefficient Algorithm/Logic",
+  "bug_description_natural_language": "The buggy solution uses a sparse table for Range Maximum Queries (RMQ) and iterates through all possible starting positions for each ending position. For each ending index `i`, it iterates through all previously seen indices `j` where the prefix sum condition could be met and performs an RMQ query on the range `[j+1, i]`. This nested loop structure, where the inner loop can be up to O(N), combined with the O(1) RMQ query, leads to an overall time complexity that is too high for the given constraints, resulting in a Time Limit Exceeded verdict. The correct solution uses a much more elegant and efficient inclusion-exclusion approach. It defines a helper function `get(nx)` that counts subarrays with a maximum value *less than or equal to* `nx`. The final answer is then calculated as `get(x) - get(x-1)`, which correctly isolates the count of subarrays where the maximum is exactly `x`.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

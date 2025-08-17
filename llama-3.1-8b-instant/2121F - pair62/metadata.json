@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "WRONG_ANSWER",
+  "buggy_solution_passed_tests": 13,
+  "correct_solution_submission_id": 332769102,
+  "buggy_solution_submission_id": 332769011,
+  "bug_category": "Data Type,Integer Overflow,Incorrect type for variable",
+  "bug_description_natural_language": "The buggy solution uses `int` for several variables, including `s`, `x`, and the elements of the prefix sum array `sum`. However, the problem constraints specify that these values can be large, potentially exceeding the capacity of a standard 32-bit integer. This leads to integer overflow, causing incorrect calculations and a 'Wrong Answer' verdict. The correct solution addresses this by using `#define int long long`, which effectively changes all instances of `int` to `long long`, ensuring that all variables can accommodate the large values required by the problem.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

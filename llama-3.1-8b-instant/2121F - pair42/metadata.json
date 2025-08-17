@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "WRONG_ANSWER",
+  "buggy_solution_passed_tests": 1,
+  "correct_solution_submission_id": 333192147,
+  "buggy_solution_submission_id": 333186276,
+  "bug_category": "Algorithmic,Flawed Logic,Incorrect boundary or edge case handling",
+  "bug_description_natural_language": "The buggy solution uses a segment tree for range maximum queries combined with a binary search function `fk`, which is a highly complex and incorrect approach for this problem. The logic is flawed in several ways: it incorrectly handles the base case for subarrays starting from index 0, and the binary search function `fk` does not correctly count the number of valid subarrays. It attempts to find the first valid starting index but fails to count all of them. The correct solution uses the principle of inclusion-exclusion. It defines a helper function `idk(arr, sum, M)` that counts subarrays with a given sum and maximum element *less than or equal to* `M`. The final answer is then calculated as `idk(v, sum, m) - idk(v, sum, m - 1)`, which correctly isolates the count of subarrays where the maximum element is exactly `m`.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

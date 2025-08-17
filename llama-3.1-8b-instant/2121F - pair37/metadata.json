@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "WRONG_ANSWER",
+  "buggy_solution_passed_tests": 1,
+  "correct_solution_submission_id": 333202511,
+  "buggy_solution_submission_id": 333202418,
+  "bug_category": "Algorithmic,Flawed Logic,Incorrect state management in iterative approach",
+  "bug_description_natural_language": "The buggy solution uses a segment tree to find the maximum in a range, combined with binary search. This approach is overly complex and contains several logical flaws. The primary bug is in how it determines the range `[i, w]` for counting valid subarrays. It incorrectly assumes that for a starting index `i`, all valid ending indices `j` (where `b[j] - b[i-1] == s`) will form a contiguous block. It then tries to find the furthest valid endpoint `w` and counts all occurrences of the target prefix sum within `[i, w]`. This logic is wrong because valid subarrays can be disjoint. The correct solution uses a much simpler and more effective two-pointer/sliding window approach. It maintains two maps, one for the current valid segment and one for the overall valid prefixes, and correctly updates them as it iterates through the array, avoiding the complexity and logical errors of the segment tree approach.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

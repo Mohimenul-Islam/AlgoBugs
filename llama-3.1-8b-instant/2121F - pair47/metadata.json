@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 30,
+  "correct_solution_submission_id": 333105518,
+  "buggy_solution_submission_id": 333105296,
+  "bug_category": "Performance,Time Limit Exceeded,Inefficient Algorithm/Logic",
+  "bug_description_natural_language": "The buggy solution attempts to find the range of valid starting indices `[lo, ro]` for each ending index `i` by using linear scans. The loops `for(int j=0;j<n;j++)` and `for(int j=ti;j>=0;j--)` iterate through the vector of potential starting indices stored in the map `mp`. This linear search within the main loop leads to a high time complexity, causing a Time Limit Exceeded error. The correct solution replaces these inefficient linear scans with `std::lower_bound` and `std::upper_bound`. These functions perform a binary search to find the range of valid starting indices much more efficiently, reducing the complexity and allowing the solution to pass within the time limit.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

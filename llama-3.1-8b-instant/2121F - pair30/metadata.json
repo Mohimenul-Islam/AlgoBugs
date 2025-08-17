@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 4,
+  "correct_solution_submission_id": 333536637,
+  "buggy_solution_submission_id": 333167397,
+  "bug_category": "Algorithmic,Flawed Logic,Incorrect boundary or edge case handling",
+  "bug_description_natural_language": "The buggy Python solution has a flawed algorithmic approach. It attempts to find the nearest element greater than `x` to the left and right for each occurrence of `x`, but this logic is incorrect for the problem. The core issue is that it tries to solve the problem by iterating through each `x` and considering its local boundaries, which leads to double-counting and incorrect logic for subarrays. The correct C++ solution uses a single-pass, two-pointer approach. It maintains a left pointer `l` and iterates with a right pointer `i`, using a map to count prefix sums within valid segments (where all elements are less than or equal to `x`). This is a much more direct and efficient way to count the valid subarrays without the complexity and flaws of the buggy solution's boundary-finding logic.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.py",
+  "problem_statement_file": "problem_statement.md"
+}

@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "WRONG_ANSWER",
+  "buggy_solution_passed_tests": 1,
+  "correct_solution_submission_id": 332769245,
+  "buggy_solution_submission_id": 332769150,
+  "bug_category": "Algorithmic,Flawed Logic,Incorrect prefix sum calculation",
+  "bug_description_natural_language": "The buggy solution has a flawed approach to handling prefix sums within valid segments. When an element `arr[i] == x` is found, it attempts to update the map `mp` with prefix sums from the previous valid segment. However, the calculation `p[j+1] - p[cn + 1]` is incorrect. It tries to re-base the prefix sums relative to the start of the current segment (`cn`), but this is not how prefix sum counting works and leads to incorrect lookups. The correct solution simplifies this by storing the absolute prefix sums `p[j+1]` in the map. The logic correctly identifies valid segments and uses the standard prefix sum technique on the absolute sums, which is the correct way to solve this type of problem.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

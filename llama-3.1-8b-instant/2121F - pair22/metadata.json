@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "WRONG_ANSWER",
+  "buggy_solution_passed_tests": 3,
+  "correct_solution_submission_id": 333657128,
+  "buggy_solution_submission_id": 333656926,
+  "bug_category": "Implementation,Resource Management,Static Buffer Overflow",
+  "bug_description_natural_language": "The buggy solution defines a constant `MAX` as `1e2+10`, which is 110. The arrays `a` and `sum` are declared with this size. However, the problem constraints state that `n` can be up to 200,000. When a test case with `n` larger than 110 is used, the code attempts to access memory outside the bounds of these arrays, leading to a static buffer overflow. This results in undefined behavior, which manifests as a 'WRONG_ANSWER' verdict. The correct solution fixes this by defining `MAX` as `2e5+10`, ensuring the arrays are large enough to handle the maximum possible input size.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

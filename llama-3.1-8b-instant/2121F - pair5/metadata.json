@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "WRONG_ANSWER",
+  "buggy_solution_passed_tests": 14,
+  "correct_solution_submission_id": 334025663,
+  "buggy_solution_submission_id": 334025488,
+  "bug_category": "Implementation Errors,Data Type & Representation Bugs,Integer Overflow",
+  "bug_description_natural_language": "The solution fails due to integer overflow because the variables `n`, `s`, and `x` were declared as `int` instead of `long long`, which is necessary to handle the large input values specified in the problem constraints.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "WRONG_ANSWER",
+  "buggy_solution_passed_tests": 1,
+  "correct_solution_submission_id": 333840321,
+  "buggy_solution_submission_id": 333839951,
+  "bug_category": "Algorithmic,Flawed Logic,Misapplication of a standard algorithm/technique",
+  "bug_description_natural_language": "The buggy solution uses a flawed algorithm to count subarrays. It incorrectly applies the prefix sum technique by using a wrong formula to find matching subarray sums. The nested loop structure is also inefficient and incorrect, failing to properly count subarrays that have `x` as their maximum value, unlike the correct inclusion-exclusion approach.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 6,
+  "correct_solution_submission_id": 333182572,
+  "buggy_solution_submission_id": 333176887,
+  "bug_category": "Performance,Time Limit Exceeded,Inefficient Algorithm/Logic",
+  "bug_description_natural_language": "The buggy solution uses a segment tree to find the maximum element in a range for every potential subarray. For each element `i`, it finds all previous indices `j` where the prefix sum condition is met and then, for each of those `j`'s, it performs a segment tree query from `j+1` to `i`. This results in a highly inefficient algorithm with a time complexity far too slow for the given constraints, leading to a Time Limit Exceeded verdict. The correct solution uses a much more efficient inclusion-exclusion principle. It first counts all subarrays with a maximum element less than or equal to `x`, and then subtracts the count of subarrays with a maximum element less than `x`, effectively isolating the subarrays where the maximum is exactly `x`.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

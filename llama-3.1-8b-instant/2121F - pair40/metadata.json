@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 24,
+  "correct_solution_submission_id": 333200998,
+  "buggy_solution_submission_id": 333200876,
+  "bug_category": "Performance,High Constant Factor TLE,Inefficient Data Structure",
+  "bug_description_natural_language": "The buggy solution uses a complex approach involving a sparse table for Range Maximum Queries (RMQ) and binary search on a list of prefix sum indices. This results in a high time complexity, approximately O(N * log(N) * log(N)), which is too slow. Additionally, it uses `std::unordered_map`, which is vulnerable to hash collisions that can degrade its performance to O(N) in worst-case scenarios, further contributing to the Time Limit Exceeded verdict. The correct solution uses `std::map` (which has a guaranteed O(log N) complexity) but with the same flawed algorithmic structure, which suggests the primary issue is the algorithm itself, but the choice of `unordered_map` exacerbates the performance problem on specific test cases.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

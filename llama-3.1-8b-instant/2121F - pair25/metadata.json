@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 13,
+  "correct_solution_submission_id": 333615068,
+  "buggy_solution_submission_id": 333614715,
+  "bug_category": "Performance,High Constant Factor TLE,Inefficient Data Structure",
+  "bug_description_natural_language": "The buggy solution uses `std::unordered_map` to count prefix sums. While `unordered_map` has an average time complexity of O(1) for insertions and lookups, it is vulnerable to hash collision attacks. In the worst-case scenario, where many keys hash to the same bucket, the complexity degrades to O(N), causing the overall solution to become too slow and exceed the time limit. The correct solution avoids this by processing the array in segments. For each segment of numbers less than or equal to K, it calculates prefix sums and then uses coordinate compression on these sums. This allows the use of a simple vector for counting frequencies, which is much faster and not susceptible to the same collision attacks.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

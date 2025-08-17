@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "WRONG_ANSWER",
+  "buggy_solution_passed_tests": 1,
+  "correct_solution_submission_id": 332785582,
+  "buggy_solution_submission_id": 332785524,
+  "bug_category": "Algorithmic,Flawed Logic,Incorrect boundary or edge case handling",
+  "bug_description_natural_language": "The buggy solution has a subtle but critical off-by-one error in its logic. When searching for valid starting positions for a subarray, it uses `lower_bound` to find the first occurrence of `x` at or after the current index `i`. However, the problem requires the subarray to start at or after `i`, and for the maximum to be `x`, the first occurrence of `x` must be at or after the start of the subarray. The use of `lower_bound` can incorrectly include subarrays where the first `x` appears before the intended start. The correct solution changes `lower_bound` to `upper_bound`. This ensures that it only considers occurrences of `x` that are strictly after the current position `i`, correctly aligning the search for valid subarrays with the problem's constraints.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 23,
+  "correct_solution_submission_id": 333781966,
+  "buggy_solution_submission_id": 333781587,
+  "bug_category": "Performance,Time Limit Exceeded,Inefficient Data Structure Usage",
+  "bug_description_natural_language": "The buggy solution uses a standard Python `defaultdict` which is susceptible to hash collision attacks. On test cases designed to cause many collisions, the dictionary's performance degrades, leading to a Time Limit Exceeded verdict. The correct solution mitigates this by XORing each key with a large random number before using it with the dictionary. This randomization of keys prevents targeted hash collisions and restores the expected average-case performance.",
+  "correct_solution_file": "solution_correct.py",
+  "buggy_solution_file": "solution_buggy.py",
+  "problem_statement_file": "problem_statement.md"
+}

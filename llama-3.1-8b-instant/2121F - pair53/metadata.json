@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "WRONG_ANSWER",
+  "buggy_solution_passed_tests": 1,
+  "correct_solution_submission_id": 333019093,
+  "buggy_solution_submission_id": 333015259,
+  "bug_category": "Algorithmic,Flawed Logic,Incorrect boundary or edge case handling",
+  "bug_description_natural_language": "The buggy solution uses a highly complex and flawed algorithm. It attempts to pre-calculate, for each occurrence of `x`, the leftmost and rightmost boundaries of a valid subarray containing that `x`. This is done using a segment tree and binary search, which is already overly complicated. The main flaw lies in how it then tries to count the subarrays within these pre-calculated boundaries. It iterates through these boundaries, but the logic for counting pairs with the correct sum is incorrect and seems to double-count or miscalculate based on a flawed understanding of how to use prefix sums in this context. The logic is convoluted and doesn't correctly handle overlapping segments or the combination of prefix sums from different parts of the segment. The correct solution uses a simple and efficient two-pointer (sliding window) approach, which correctly maintains a window of valid elements and uses a map to count prefix sums in a single pass.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

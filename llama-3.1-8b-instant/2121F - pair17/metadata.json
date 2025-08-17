@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 13,
+  "correct_solution_submission_id": 333782471,
+  "buggy_solution_submission_id": 333782159,
+  "bug_category": "Performance,High Constant Factor TLE,Inefficient Data Structure Usage",
+  "bug_description_natural_language": "The buggy solution experiences a Time Limit Exceeded error due to an inefficiency in the main loop. Inside the loop, it copies a vector of indices from a map using `vi temp = mp1[req]`. As the map grows, this vector can become large, and copying it in every iteration leads to a quadratic time complexity in the worst case. The correct solution avoids this by directly accessing the vector in the map (`mp1[req]`) without creating a copy, maintaining the intended O(N log N) complexity.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

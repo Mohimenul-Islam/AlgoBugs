@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 13,
+  "correct_solution_submission_id": 333531724,
+  "buggy_solution_submission_id": 333527945,
+  "bug_category": "Performance,Time Limit Exceeded,Inefficient Algorithm/Logic",
+  "bug_description_natural_language": "The buggy solution uses a highly inefficient algorithm, resulting in a Time Limit Exceeded error. It builds a segment tree to query for maximum values and then, for each element `i` in the array, it performs two separate binary searches on the positions of previously seen prefix sums. Within each step of these binary searches, it makes a query to the segment tree. This nested structure leads to a time complexity of approximately O(N * log(N) * log(N)), which is too slow for the given constraints. The correct solution employs a much more efficient two-pointer (or sliding window) approach with a map, achieving a time complexity of O(N log N) by processing the array in a single pass.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

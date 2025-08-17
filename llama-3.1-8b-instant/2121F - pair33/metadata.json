@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 31,
+  "correct_solution_submission_id": 333500331,
+  "buggy_solution_submission_id": 333500030,
+  "bug_category": "Performance,High Constant Factor TLE,Inefficient Data Structure",
+  "bug_description_natural_language": "The buggy solution uses `std::unordered_map` for tracking prefix sums, while the correct solution uses `std::map`. The core algorithm in both solutions is an efficient two-pointer approach. However, `std::unordered_map` is vulnerable to hash collisions, which can degrade its performance from an average of O(1) to a worst-case of O(N) for insertions and lookups. The test cases that cause the Time Limit Exceeded verdict are likely designed to exploit this weakness by causing frequent hash collisions. The `std::map`, which is based on a balanced binary search tree, provides a guaranteed O(log N) performance, which is sufficient to pass all test cases within the time limit.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

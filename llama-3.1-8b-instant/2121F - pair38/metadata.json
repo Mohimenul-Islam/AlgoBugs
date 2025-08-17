@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 31,
+  "correct_solution_submission_id": 333215466,
+  "buggy_solution_submission_id": 333215174,
+  "bug_category": "Performance,High Constant Factor TLE,Inefficient Data Structure",
+  "bug_description_natural_language": "The buggy solution uses `std::unordered_map`, which, while having an average O(1) time complexity, can degrade to O(N) in the worst case due to hash collisions. The test cases that cause the Time Limit Exceeded verdict are likely designed to trigger such collisions. Additionally, the buggy solution declares the input array `a` and prefix sum array `pres` inside the `while` loop, causing them to be reallocated for each test case, which adds a small but unnecessary overhead. The correct solution avoids these issues by using `std::map`, which guarantees O(log N) performance, and by declaring the arrays outside the loop to prevent repeated memory allocation.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

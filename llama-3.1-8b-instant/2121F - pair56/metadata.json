@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 39,
+  "correct_solution_submission_id": 332986890,
+  "buggy_solution_submission_id": 332986732,
+  "bug_category": "Performance,High Constant Factor TLE,Inefficient Data Structure",
+  "bug_description_natural_language": "The buggy solution uses `std::unordered_map` with its default hash function, which is vulnerable to hash collisions on certain data patterns, leading to worst-case O(N) performance and a Time Limit Exceeded verdict. The correct solution addresses this by implementing a custom hash function (`custom_hash`) for the `unordered_map`. This custom hash function uses a split-mix64 algorithm and a random value to produce a better distribution of hash keys, preventing collisions and maintaining the average O(1) performance of the `unordered_map`. Additionally, the correct solution includes optimizations like pre-reserving memory for the map and managing its clearing more efficiently to further reduce constant factors.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

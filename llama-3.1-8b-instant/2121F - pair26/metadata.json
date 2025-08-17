@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 13,
+  "correct_solution_submission_id": 333609885,
+  "buggy_solution_submission_id": 333609288,
+  "bug_category": "Performance,High Constant Factor TLE,Inefficient Data Structure",
+  "bug_description_natural_language": "The buggy solution uses `std::unordered_map` to store prefix sums and their indices. While `unordered_map` has an average O(1) complexity, it is susceptible to hash collision attacks. On specific test cases designed to cause collisions, its performance degrades to O(N), leading to a Time Limit Exceeded error. Additionally, the line `vi b=cnt[sum-s];` creates a copy of the vector of indices in each iteration, which is inefficient. The correct solution replaces `std::unordered_map` with `std::map`, which has a guaranteed O(log N) complexity and is not vulnerable to the same collision attacks. It also accesses the vector directly (`cnt[sum-s]`) to avoid the expensive copy operation.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

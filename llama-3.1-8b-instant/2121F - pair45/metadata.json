@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 4,
+  "correct_solution_submission_id": 333156327,
+  "buggy_solution_submission_id": 333155063,
+  "bug_category": "Performance,Time Limit Exceeded,Inefficient Algorithm/Logic",
+  "bug_description_natural_language": "The buggy Python solution uses a brute-force approach with a nested loop, resulting in an O(N^2) time complexity. It iterates through all possible subarrays, calculates their sum and maximum value, and checks if they meet the conditions. This is too slow for the given constraints and causes a Time Limit Exceeded error. The correct C++ solution uses a much more efficient approach. It first identifies contiguous segments of the array where all elements are less than or equal to `x`. Then, for each of these segments, it uses a helper function `dfs` (which is essentially a prefix sum counting method) to find the number of valid subarrays in O(L * log L) time, where L is the length of the segment. This divide-and-conquer strategy is significantly faster than the brute-force method.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.py",
+  "problem_statement_file": "problem_statement.md"
+}

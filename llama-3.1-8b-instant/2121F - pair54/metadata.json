@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 29,
+  "correct_solution_submission_id": 333014626,
+  "buggy_solution_submission_id": 333014366,
+  "bug_category": "Performance,High Constant Factor TLE,Inefficient Data Structure",
+  "bug_description_natural_language": "The buggy solution first splits the array into sub-segments where all elements are less than or equal to `x`. Then, for each segment, it iterates through the elements and for each element, it performs a binary search (`upper_bound`) on a vector of positions stored in a map. This approach has a higher constant factor and is less efficient than a direct two-pointer approach. Additionally, it uses `std::unordered_map`, which is prone to hash collisions and can lead to worst-case O(N) performance. The correct solution uses a single-pass two-pointer (sliding window) approach with a `std::map`, which is more efficient and avoids the overhead of splitting the array and the potential for hash collisions, thus passing within the time limit.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

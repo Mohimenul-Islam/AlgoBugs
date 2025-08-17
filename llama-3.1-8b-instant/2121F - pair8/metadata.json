@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 4,
+  "correct_solution_submission_id": 333927866,
+  "buggy_solution_submission_id": 333926589,
+  "bug_category": "Algorithmic Errors,Flawed Greedy Choice",
+  "bug_description_natural_language": "The buggy solution uses an incorrect greedy approach by calculating the number of valid subarrays up to a maximum value of `x` and `x-1` and subtracting them, which fails to correctly account for the constraints on subsegment maximums.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

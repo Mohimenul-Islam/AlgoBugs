@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 13,
+  "correct_solution_submission_id": 333107753,
+  "buggy_solution_submission_id": 333106770,
+  "bug_category": "Performance,Time Limit Exceeded,Inefficient Algorithm/Logic",
+  "bug_description_natural_language": "The buggy solution iterates through all possible ending positions `c` for a given starting position `i` and checks if the conditions are met. This nested loop `for (auto c : mp[t])` within the main loop results in a time complexity that is too high, leading to a Time Limit Exceeded verdict. The correct solution replaces this inefficient linear scan with a binary search. For each starting position `i`, it binary searches on the vector of indices `mp[t]` to find the first valid ending position, and then adds the count of all subsequent valid positions. This optimization reduces the complexity of the inner loop from O(N) to O(log N), allowing the solution to pass within the time limit.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 29,
+  "correct_solution_submission_id": 333250483,
+  "buggy_solution_submission_id": 333249562,
+  "bug_category": "Performance,Time Limit Exceeded,Inefficient Data Structure",
+  "bug_description_natural_language": "The buggy solution fails due to Time Limit Exceeded (TLE) for two primary reasons. First, it uses `std::unordered_map`, which is susceptible to performance degradation on test cases that cause hash collisions, leading to near O(N) complexity for operations instead of the average O(1). The correct solution uses `std::map`, which guarantees O(log N) performance and avoids this issue. Second, the buggy code is missing essential C++ I/O optimizations (`ios_base::sync_with_stdio(0); cin.tie(0);`), which significantly slows down input and output operations. The combination of an inefficient data structure choice for the specific test data and slow I/O leads to the TLE verdict. The buggy solution also contains a logical flaw where it checks for valid subarrays and then uses `continue`, which is redundant and alters the control flow unnecessarily.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 5,
+  "correct_solution_submission_id": 332946664,
+  "buggy_solution_submission_id": 332946558,
+  "bug_category": "Performance,Time Limit Exceeded,Inefficient Algorithm/Logic",
+  "bug_description_natural_language": "The buggy Java solution uses a brute-force approach with a nested loop, resulting in an O(N^2) time complexity. It iterates through all possible subarrays, calculates their sum and maximum value, and checks if they meet the conditions. This is too slow for the given constraints and causes a Time Limit Exceeded error. The correct solution uses a much more efficient inclusion-exclusion principle. It defines a helper function `computeTotal` that counts subarrays with a given sum and a maximum value either less than or equal to `x` or strictly less than `x`. The final answer is then the difference between these two counts, which correctly isolates the subarrays where the maximum is exactly `x`. This approach, combined with a prefix sum counting method, runs in O(N) time.",
+  "correct_solution_file": "solution_correct.java",
+  "buggy_solution_file": "solution_buggy.java",
+  "problem_statement_file": "problem_statement.md"
+}

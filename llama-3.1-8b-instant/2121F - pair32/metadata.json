@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "WRONG_ANSWER",
+  "buggy_solution_passed_tests": 8,
+  "correct_solution_submission_id": 333525496,
+  "buggy_solution_submission_id": 333525393,
+  "bug_category": "Algorithmic,Flawed Logic,Incorrect state management in iterative approach",
+  "bug_description_natural_language": "The solution attempts a two-pointer-like approach using a queue for potential prefix sums and a map for 'activated' prefix sums. The logic is flawed because the map `M`, which stores counts of valid starting prefix sums, is not managed correctly. When an element `V[i] == x` is found, it activates the current segment by moving prefix sums from a queue to the map `M`. However, `M` is not cleared after this, so it incorrectly accumulates prefix sums from multiple, disjoint valid segments over the course of the iteration. This allows a subarray ending in the current segment to be matched with a starting prefix sum from a much earlier, unrelated segment, leading to wrong counts and a 'Wrong Answer' verdict.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 23,
+  "correct_solution_submission_id": 333722872,
+  "buggy_solution_submission_id": 333710293,
+  "bug_category": "Algorithmic Errors,Flawed Greedy Choice",
+  "bug_description_natural_language": "The solution uses a flawed inclusion-exclusion principle, incorrectly calculating the total valid subarrays by subtracting subarrays without the maximum value `x`, which fails on complex cases with multiple instances of `x`.",
+  "correct_solution_file": "solution_correct.py",
+  "buggy_solution_file": "solution_buggy.py",
+  "problem_statement_file": "problem_statement.md"
+}

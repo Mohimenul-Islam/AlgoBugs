@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 13,
+  "correct_solution_submission_id": 333201327,
+  "buggy_solution_submission_id": 333201202,
+  "bug_category": "Algorithmic,Flawed Logic,Incorrect prefix sum calculation",
+  "bug_description_natural_language": "The buggy solution has two main flaws. First, it incorrectly calculates the prefix sums. The line `pre[i+1] = pre[i] = A[i]` does not accumulate the sums; it just copies the current element `A[i]` into both `pre[i]` and `pre[i+1]`, completely breaking the logic that relies on correct prefix sums. Second, the logic for counting valid subarrays is flawed. It uses a variable `lastX` to track the last occurrence of `X` and then uses `upper_bound` on a vector of indices from the map `M`. This approach is not a standard or correct way to solve this problem and seems to be a misunderstanding of the two-pointer/sliding window technique. The correct solution removes the faulty prefix sum calculation and implements a proper sliding window approach where the map `M` stores counts of valid prefix sums, which are correctly managed as the window slides.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

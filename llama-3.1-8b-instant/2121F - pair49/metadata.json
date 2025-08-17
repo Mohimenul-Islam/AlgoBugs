@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 31,
+  "correct_solution_submission_id": 333059578,
+  "buggy_solution_submission_id": 333058473,
+  "bug_category": "Performance,High Constant Factor TLE,Inefficient Data Structure",
+  "bug_description_natural_language": "The buggy solution uses `std::unordered_map` and `std::multiset::extract`, both of which contribute to its poor performance. `std::unordered_map` is susceptible to hash collisions, which can degrade its performance to O(N) in the worst case. The use of `multiset::extract` is also less efficient than simply erasing elements. The correct solution replaces `std::unordered_map` with `std::map`, which guarantees O(log N) performance, and avoids the use of `extract`. Although the overall algorithm, a complex two-pointer approach with two multisets, is the same, these changes in data structure and method calls are enough to avoid the Time Limit Exceeded error on the specific test cases that cause the buggy solution to fail.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

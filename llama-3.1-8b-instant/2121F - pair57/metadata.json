@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "WRONG_ANSWER",
+  "buggy_solution_passed_tests": 14,
+  "correct_solution_submission_id": 332975420,
+  "buggy_solution_submission_id": 332975209,
+  "bug_category": "Data Type,Integer Overflow,Incorrect type for variable",
+  "bug_description_natural_language": "The buggy solution declares the variables `s` and `x` as `int`. However, the problem constraints specify that `s` can be as large as 10^18, which exceeds the capacity of a standard 32-bit integer. This leads to an integer overflow when reading the input, causing the program to work with an incorrect value for `s` and produce a 'Wrong Answer'. The correct solution fixes this by declaring `s` as `long long` (`ll`), which can accommodate the large values specified in the problem.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

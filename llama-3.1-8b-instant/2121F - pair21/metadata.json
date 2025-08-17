@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "WRONG_ANSWER",
+  "buggy_solution_passed_tests": 14,
+  "correct_solution_submission_id": 333718595,
+  "buggy_solution_submission_id": 333718561,
+  "bug_category": "Implementation,Data Type,Integer Overflow",
+  "bug_description_natural_language": "The buggy solution declares the variables `n`, `s`, `x`, and the input array `a` as `int`. The problem constraints allow for input values and cumulative sums that can exceed the maximum value of a 32-bit integer. This leads to integer overflow when calculating the prefix sums (`sum+=a[i]`) and the target sum (`sum-s`), resulting in incorrect map lookups and a \"WRONG_ANSWER\" verdict. The correct solution fixes this by declaring these variables as `long long`, which can accommodate the larger values.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

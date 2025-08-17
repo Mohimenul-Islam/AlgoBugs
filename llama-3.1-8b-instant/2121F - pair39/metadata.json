@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "WRONG_ANSWER",
+  "buggy_solution_passed_tests": 2,
+  "correct_solution_submission_id": 333212109,
+  "buggy_solution_submission_id": 333181623,
+  "bug_category": "Algorithmic,Flawed Logic,Incorrect boundary or edge case handling",
+  "bug_description_natural_language": "The buggy solution uses a complex and flawed approach involving a sparse table (for Range Maximum Queries) and binary search. The core logic is incorrect because it tries to find a range of indices `[L, R]` where the condition `ask(i, e[to][mid]) >= x` holds, but this doesn't correctly translate to the problem of counting subarrays. The logic for finding `L` and `R` is convoluted and doesn't handle the conditions properly, especially the distinction between `>= x` and `> x`. It also has an issue with how it handles the vectors in the map `e`, adding `n+1` to them, which complicates boundary checks. The correct solution uses a simple and efficient two-pointer approach, which correctly manages the sliding window and counts valid subarrays in a single pass without the need for complex data structures or flawed binary searches.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "WRONG_ANSWER",
+  "buggy_solution_passed_tests": 1,
+  "correct_solution_submission_id": 333265471,
+  "buggy_solution_submission_id": 333265157,
+  "bug_category": "Algorithmic,Flawed Logic,Incorrect boundary or edge case handling",
+  "bug_description_natural_language": "The buggy solution contains a flawed edge case check: `if(x > s)`. This condition is incorrect because the sum `s` is compared against the maximum value `x`, but the actual subarray sums can be negative or different from `s`. This check can prematurely terminate the program with an output of 0 for valid test cases where `x > s` but valid subarrays still exist. The correct solution omits this faulty check and proceeds with the main two-pointer algorithm regardless of the initial relationship between `x` and `s`, correctly handling all cases.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

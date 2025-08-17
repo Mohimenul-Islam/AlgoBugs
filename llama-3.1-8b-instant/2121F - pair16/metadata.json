@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "WRONG_ANSWER",
+  "buggy_solution_passed_tests": 1,
+  "correct_solution_submission_id": 333782507,
+  "buggy_solution_submission_id": 333780291,
+  "bug_category": "Algorithmic,Flawed Logic,Incorrect boundary or edge case handling",
+  "bug_description_natural_language": "The buggy solution incorrectly handles subarrays. It attempts to use a map of prefix sums to indices and a segment tree for range maximum queries. However, the logic for querying and counting valid subarrays is flawed. It fails to correctly identify the start and end of subarrays that satisfy both the sum and maximum value conditions, especially when elements greater than `x` break the continuity. The correct solution uses an inclusion-exclusion approach on contiguous blocks of elements less than or equal to `x`.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 23,
+  "correct_solution_submission_id": 333161179,
+  "buggy_solution_submission_id": 333160967,
+  "bug_category": "Performance,High Constant Factor TLE,Inefficient I/O",
+  "bug_description_natural_language": "The buggy Python solution uses standard `input()` for reading, which is known to be slow and can cause Time Limit Exceeded (TLE) in competitive programming problems with large inputs. The correct solution addresses this by reading all input at once using `sys.stdin.read().split()` and then parsing the values. This significantly speeds up the I/O operations. Additionally, the buggy solution re-initializes the `dic` with `dic.clear()` whereas the correct solution uses `dic = defaultdict(int)`, which can be slightly more efficient. The primary reason for the TLE, however, is the slow input method.",
+  "correct_solution_file": "solution_correct.py",
+  "buggy_solution_file": "solution_buggy.py",
+  "problem_statement_file": "problem_statement.md"
+}

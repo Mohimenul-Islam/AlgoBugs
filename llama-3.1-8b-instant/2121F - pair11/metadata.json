@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 29,
+  "correct_solution_submission_id": 333877464,
+  "buggy_solution_submission_id": 333877245,
+  "bug_category": "Performance Errors,Asymptotic Complexity Trap,Adversarial Input Structure",
+  "bug_description_natural_language": "The solution times out due to using `unordered_map`, which is vulnerable to hash collision attacks, leading to worst-case linear time complexity for lookups instead of average constant time.",
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}
