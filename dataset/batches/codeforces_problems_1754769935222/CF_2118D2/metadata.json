@@ -1,0 +1,11 @@
+{
+  "problem_id": "CF_2118D2",
+  "problem_title": "Red Light, Green Light (Hard version)",
+  "problem_url": "https://codeforces.com/contest/2118/problem/D2",
+  "rating": 2200,
+  "bug_category": null,
+  "bug_description_natural_language": null,
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

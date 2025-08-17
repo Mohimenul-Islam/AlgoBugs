@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2121F",
+  "problem_title": "Yamakasi",
+  "problem_url": "https://codeforces.com/contest/2121/problem/F",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "WRONG_ANSWER",
+  "buggy_solution_passed_tests": 1,
+  "correct_solution_submission_id": 333540104,
+  "buggy_solution_submission_id": 333539094,
+  "bug_category": null,
+  "bug_description_natural_language": null,
+  "correct_solution_file": "solution_correct.cpp",
+  "buggy_solution_file": "solution_buggy.cpp",
+  "problem_statement_file": "problem_statement.md"
+}

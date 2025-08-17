@@ -1,0 +1,16 @@
+{
+  "problem_id": "CF_2127D",
+  "problem_title": "Root was Built by Love, Broken by Destiny",
+  "problem_url": "https://codeforces.com/contest/2127/problem/D",
+  "rating": 1800,
+  "correct_solution_verdict": "OK",
+  "buggy_solution_verdict": "TIME_LIMIT_EXCEEDED",
+  "buggy_solution_passed_tests": 5,
+  "correct_solution_submission_id": 333564909,
+  "buggy_solution_submission_id": 333564354,
+  "bug_category": null,
+  "bug_description_natural_language": null,
+  "correct_solution_file": "solution_correct.py",
+  "buggy_solution_file": "solution_buggy.py",
+  "problem_statement_file": "problem_statement.md"
+}

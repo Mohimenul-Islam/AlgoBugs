@@ -1,0 +1,11 @@
+{
+  "problem_id": "CF_2085E",
+  "problem_title": "Serval and Modulo",
+  "problem_url": "https://codeforces.com/contest/2085/problem/E",
+  "rating": 2200,
+  "bug_category": null,
+  "bug_description_natural_language": null,
+  "correct_solution_file": "solution_correct.py",
+  "buggy_solution_file": "solution_buggy.py",
+  "problem_statement_file": "problem_statement.md"
+}
